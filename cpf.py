@@ -2,7 +2,11 @@
 import random, time
 def random_numbers():
 	first_numbers = ''
+<<<<<<< HEAD
 	for number in range(9):
+=======
+	while(len(first_numbers) < 9):
+>>>>>>> e64ff5c1674099afa7362e3ede037341c36a0c4b
 		random_number = random.randint(0,9)
 		first_numbers += str(random_number)
 	return first_numbers
@@ -31,9 +35,15 @@ def cpf():
 			first_verifier = verifier(cpf_number, 10)
 			second_verifier = verifier(cpf_number + first_verifier, 11)
 			cpf_number += first_verifier + second_verifier
+<<<<<<< HEAD
 			state = {'0':'Rio Grande do Sul', '1':'Distrito Federal, Goiás, Mato Grosso do Sul ou Tocantins', '2':'Pará, Amazonas, Acre, Amapá, Rondônia ou Roraima', '3':'Ceará, Maranhão ou Piauí', '4':'Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas', '5':'Bahia ou Sergipe', '6':'Minas Gerais', '7':'Rio de Janeiro ou Espírito Santo', '8':'São Paulo', '9':'Paraná ou Santa Catarina'}
 			print '\aCPF: %s.%s.%s-%s\n\n' %(cpf_number[0:3], cpf_number[3:6], cpf_number[6:9], cpf_number[9:])
 			print 'Localização de registro do CPF: %s\n\n' %(state[cpf_number[8]])
+=======
+			state = {0:'Rio Grande do Sul', 1:'Distrito Federal, Goiás, Mato Grosso do Sul ou Tocantins', 2:'Pará, Amazonas, Acre, Amapá, Rondônia ou Roraima', 3:'Ceará, Maranhão ou Piauí', 4:'Pernambuco, Rio Grande do Norte, Paraíba ou Alagoas', 5:'Bahia ou Sergipe', 6:'Minas Gerais', 7:'Rio de Janeiro ou Espírito Santo', 8:'São Paulo', 9:'Paraná ou Santa Catarina'}
+			print '\aCPF: %s.%s.%s-%s\n\n' %(cpf_number[0:3], cpf_numbers[3:6], cpf_numbers[6:9], cpf_numbers[10:])
+			print 'Localização de registro do CPF: %s\n\n' %(state[int(final_numbers[-1])])
+>>>>>>> e64ff5c1674099afa7362e3ede037341c36a0c4b
 			elapsed = (time.time() - start)
 			print 'O CPF foi gerado em %s segundos\n\n\n\n\n' %(elapsed)
 cpf()
